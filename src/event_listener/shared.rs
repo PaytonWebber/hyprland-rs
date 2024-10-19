@@ -692,7 +692,8 @@ pub(crate) fn event_parser(event: String) -> crate::Result<Vec<Event>> {
                 "A Hyprland event that has no regex matches was passed! Please file a bug report!"
             ),
             1 => {
-                report_unknown!((event_str.split('>').next().unwrap_or("unknown")));
+                // TODO: Handle Hyprland v2 events
+                // report_unknown!((event_str.split('>').next().unwrap_or("unknown")));
                 continue;
             }
             2 => {
